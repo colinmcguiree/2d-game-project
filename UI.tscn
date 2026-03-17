@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://btm4hx68doql0"]
+
+[ext_resource type="Script" uid="uid://c8din7mk6erfy" path="res://button.gd" id="1_b3bc3"]
+[ext_resource type="Script" uid="uid://c51ywifcbm8r" path="res://quit.gd" id="2_3b2b5"]
+[ext_resource type="Script" uid="uid://dnw5mj40mvdwf" path="res://tutorial.gd" id="3_g6l6n"]
+
+[node name="Control" type="Control" unique_id=1628526450]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1599823965]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.5
+offset_top = -48.0
+offset_right = 352.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Attack on Gorgochov"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="." unique_id=682797304]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5069444
+anchor_top = 0.50617284
+anchor_right = 0.5069444
+anchor_bottom = 0.50617284
+offset_left = -69.0
+offset_top = 51.0
+offset_right = 57.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Start"
+script = ExtResource("1_b3bc3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="." unique_id=716597774]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7447917
+anchor_top = 0.36188272
+anchor_right = 0.7447917
+anchor_bottom = 0.36188272
+offset_left = -75.0
+offset_top = 140.5
+offset_right = 51.0
+offset_bottom = 217.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+script = ExtResource("2_3b2b5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Tutorial" type="Button" parent="." unique_id=2071226012]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2612847
+anchor_top = 0.36496913
+anchor_right = 0.32291666
+anchor_bottom = 0.36496913
+offset_left = -75.0
+offset_top = 140.5
+offset_right = 51.0
+offset_bottom = 217.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Tutorial"
+script = ExtResource("3_g6l6n")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
+[connection signal="pressed" from="Tutorial" to="Tutorial" method="_on_pressed"]
