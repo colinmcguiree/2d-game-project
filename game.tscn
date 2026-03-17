@@ -159,6 +159,9 @@ sources/0 = SubResource("TileSetAtlasSource_feb5d")
 [node name="boss" parent="." unique_id=2049148244 instance=ExtResource("3_feb5d")]
 position = Vector2(2, -147)
 
+[node name="MoveTimer" type="Timer" parent="boss" unique_id=108918995]
+wait_time = 2.0
+
 [node name="Player" parent="." unique_id=2024112352 instance=ExtResource("1_80nbo")]
 position = Vector2(-87, 20)
 
@@ -172,3 +175,5 @@ zoom = Vector2(2, 2)
 
 [node name="SecondPlayer" parent="." unique_id=2136149429 instance=ExtResource("3_fc0e3")]
 position = Vector2(118, 30)
+
+[connection signal="timeout" from="boss/MoveTimer" to="boss" method="_on_move_timer_timeout"]
