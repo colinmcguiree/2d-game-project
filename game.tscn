@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://hqiexm3hunqa"]
 
+[ext_resource type="Script" uid="uid://4cesvka3hjto" path="res://gamemanager.gd" id="1_7jktm"]
 [ext_resource type="PackedScene" uid="uid://cm5dqfbvh7dro" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://n248pr14ssa3" path="res://Free/Terrain/Terrain (16x16).png" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b85hwm6p1an1a" path="res://second_player.tscn" id="3_fc0e3"]
@@ -155,12 +156,17 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_feb5d")
 
 [node name="Node2D" type="Node2D" unique_id=154634769]
+script = ExtResource("1_7jktm")
 
 [node name="boss" parent="." unique_id=2049148244 instance=ExtResource("3_feb5d")]
 position = Vector2(2, -147)
 
 [node name="MoveTimer" type="Timer" parent="boss" unique_id=108918995]
 wait_time = 2.0
+
+[node name="Label" type="Label" parent="boss" unique_id=1204735576]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Player" parent="." unique_id=2024112352 instance=ExtResource("1_80nbo")]
 position = Vector2(-87, 20)
@@ -175,5 +181,18 @@ zoom = Vector2(2, 2)
 
 [node name="SecondPlayer" parent="." unique_id=2136149429 instance=ExtResource("3_fc0e3")]
 position = Vector2(118, 30)
+
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=486531204]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" unique_id=1272008689]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.1882353)
+
+[node name="Label" type="Label" parent="Overlay" unique_id=610587480]
+offset_right = 40.0
+offset_bottom = 124.0
+pivot_offset_ratio = Vector2(576, 324)
+theme_override_font_sizes/font_size = 90
 
 [connection signal="timeout" from="boss/MoveTimer" to="boss" method="_on_move_timer_timeout"]
