@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btm4hx68doql0"]
 
 [ext_resource type="Script" uid="uid://c8din7mk6erfy" path="res://button.gd" id="1_b3bc3"]
+[ext_resource type="FontFile" uid="uid://cm72y53yum0pd" path="res://Free/munro/munro-small.ttf" id="1_qui0h"]
 [ext_resource type="Script" uid="uid://c51ywifcbm8r" path="res://quit.gd" id="2_3b2b5"]
 [ext_resource type="Script" uid="uid://dnw5mj40mvdwf" path="res://tutorial.gd" id="3_g6l6n"]
 
@@ -25,6 +26,7 @@ offset_right = 352.5
 offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_qui0h")
 theme_override_font_sizes/font_size = 70
 text = "Attack on Gorgochov"
 horizontal_alignment = 1
@@ -43,6 +45,7 @@ offset_right = 57.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_qui0h")
 theme_override_font_sizes/font_size = 50
 text = "Start"
 script = ExtResource("1_b3bc3")
@@ -61,6 +64,7 @@ offset_right = 51.0
 offset_bottom = 217.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_qui0h")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 script = ExtResource("2_3b2b5")
@@ -79,6 +83,7 @@ offset_right = 51.0
 offset_bottom = 217.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_qui0h")
 theme_override_font_sizes/font_size = 50
 text = "Tutorial"
 script = ExtResource("3_g6l6n")
