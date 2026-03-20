@@ -20,6 +20,7 @@ func fire():
 	# print(facing)
 	get_parent().add_child(new_bullet)
 	new_bullet.position = bulletspawn.global_position
+	new_bullet.modulate = Color(1.0, 0.0, 1.0, 1.0)
 
 func _process(float):
 	if Input.is_action_just_pressed("p1_fire"):

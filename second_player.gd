@@ -20,7 +20,7 @@ func fire():
 	bullet.shooter = self
 	get_parent().add_child(bullet)
 	bullet.position = bulletspawn.global_position
-	
+	bullet.modulate = Color(0.0, 1.0, 0.0, 1.0)
 
 
 func _process(float):
