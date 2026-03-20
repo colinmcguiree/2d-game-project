@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 @export var bullet_scene_2: PackedScene
 @onready var bspawnA = $BossBSpawn_A
