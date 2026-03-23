@@ -9,6 +9,7 @@ const SPEED = 100.0
 
 @export var bullet_scene: PackedScene
 @onready var bulletspawn = $bulletspawn2
+@onready var animated_sprite = $AnimatedSprite2D
 @onready var healthbar = $Label
 @onready var heal_box = $P1_heal
 
@@ -63,7 +64,7 @@ func _physics_process(delta):
 	#	animated_sprite.play("idle")
 	#else:
 	#	animated_sprite.play("move")
-
+		
 	move_and_slide()
 	
 	if health < 1:
