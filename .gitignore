@@ -15,3 +15,6 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 ._*
+
+git rm -r --cached '._*'
+git commit -m "Remove tracked macOS metadata files"
