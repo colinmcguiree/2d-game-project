@@ -9,10 +9,15 @@ const SPEED = 100.0
 
 @export var bullet_scene: PackedScene
 @onready var bulletspawn = $bulletspawn2
-@onready var animated_sprite = $AnimatedSprite2D
+#@onready var animated_sprite = $AnimatedSprite2D
+#@export var sprite_2d: AnimatedSprite2D
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+
 @onready var healthbar = $Label
 @onready var heal_box = $P1_heal
 
+func ready():
+	sprite_2d.play("idle")
 
 
 func fire():
@@ -52,7 +57,11 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	if direction or direction2:
 		facing = Vector2(direction, direction2).normalized()
-
+	
+	if velocity.x !=0:
+		sprite_2d.play("move")
+	#if direction:
+	#	animated_sprite.play("move")
 	#flips sprite
 	#if direction > 0:
 	#	animated_sprite.flip_h = false
