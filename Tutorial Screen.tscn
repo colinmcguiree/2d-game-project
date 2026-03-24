@@ -15,7 +15,7 @@ text = "Player 1 move around the map with WASD keys
                 Q to shoot    E to heal
 
 Player 2 move around the map with arrow keys
-                . to shoot     / to heal"
+                . to heal     / to shoot"
 label_settings = SubResource("LabelSettings_jyhm1")
 horizontal_alignment = 1
 vertical_alignment = 1
