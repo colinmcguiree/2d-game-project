@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b85hwm6p1an1a" path="res://second_player.tscn" id="3_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://b6xbhvcfmon4h" path="res://boss.tscn" id="3_feb5d"]
 [ext_resource type="AudioStream" uid="uid://cees8v3elbjp5" path="res://Broken Bond.ogg" id="6_ryrav"]
+[ext_resource type="Texture2D" uid="uid://bd1405cq1ghb8" path="res://Magic Cave background4.png" id="7_eow3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_feb5d"]
 texture = ExtResource("2_e2o6t")
@@ -192,17 +193,20 @@ offset_bottom = 648.0
 color = Color(0, 0, 0, 0.1882353)
 
 [node name="Label" type="Label" parent="Overlay" unique_id=610587480]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 32
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_right = 40.0
+offset_bottom = 124.0
+pivot_offset_ratio = Vector2(576, 324)
+theme_override_font_sizes/font_size = 90
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1674673657]
 stream = ExtResource("6_ryrav")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569881700]
+z_index = -2
+z_as_relative = false
+position = Vector2(11, -79)
+scale = Vector2(2.875, 2.875)
+texture = ExtResource("7_eow3j")
 
 [connection signal="timeout" from="boss/MoveTimer" to="boss" method="_on_move_timer_timeout"]
