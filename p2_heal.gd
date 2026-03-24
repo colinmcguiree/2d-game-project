@@ -15,8 +15,8 @@ func _on_body_entered(body):
 		
 
 func _process(float):
-	if Input.is_action_pressed("P2_heal_key") and healingtarget and healingtarget.health < 99:
-		healingtarget.health += 1
+	if Input.is_action_pressed("P2_heal_key") and healingtarget and healingtarget.health < 999:
+		healingtarget.health += 100
 
 
 

@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var move_timer = $MoveTimer
 @onready var healthbar = $GorgyHP
 
-var health = 999
+var health = 9999
 var bullet_angle_offset = 0.0
 var num_bullets = 8
 
