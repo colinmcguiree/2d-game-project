@@ -11,6 +11,8 @@ var game_over = false
 
 func _process(_delta):
 	if game_over:
+		if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_cancel"):
+			get_tree().quit()
 		return
 
 	var p1_alive = is_instance_valid(player1)
@@ -21,17 +23,17 @@ func _process(_delta):
 
 	# Gorgochov kills both players
 	if not p1_alive and not p2_alive:
-		show_screen("GAME OVER\nGorgochov remains victorious")
+		show_screen("GAME OVER\nGorgochov remains victorious\n\nPress Enter or Escape to quit")
 		return
 
 	# Player 1 kills Gorgochov AND Player 2
 	if p1_alive and not p2_alive and not boss_alive:
-		show_screen("GAME OVER\nPlayer 1 betrayed their ally!\nPlayer 1 wins!")
+		show_screen("GAME OVER\nPlayer 1 betrayed their ally!\nPlayer 1 wins!\n\nPress Enter or Escape to quit")
 		return
 
 	# Player 2 kills Gorgochov AND Player 1
 	if p2_alive and not p1_alive and not boss_alive:
-		show_screen("GAME OVER\nPlayer 2 betrayed their ally!\nPlayer 2 wins!")
+		show_screen("GAME OVER\nPlayer 2 betrayed their ally!\nPlayer 2 wins!\n\nPress Enter or Escape to quit")
 		return
 
 
