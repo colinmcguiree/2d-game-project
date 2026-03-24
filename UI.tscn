@@ -35,10 +35,10 @@ vertical_alignment = 1
 [node name="Start" type="Button" parent="." unique_id=682797304]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5069444
-anchor_top = 0.50617284
-anchor_right = 0.5069444
-anchor_bottom = 0.50617284
+anchor_left = 0.5208333
+anchor_top = 0.5
+anchor_right = 0.5208333
+anchor_bottom = 0.5
 offset_left = -69.0
 offset_top = 51.0
 offset_right = 57.0

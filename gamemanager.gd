@@ -17,18 +17,21 @@ func _process(_delta):
 	var p2_alive = is_instance_valid(player2)
 	var boss_alive = is_instance_valid(boss)
 
-	# Both players dead
+	# --- GAME OVER conditions ---
+
+	# Gorgochov kills both players
 	if not p1_alive and not p2_alive:
-		show_screen("GAME OVER\nBoth players defeated...")
+		show_screen("GAME OVER\nGorgochov remains victorious")
 		return
 
-	# Boss dead — check who survived
-	if not boss_alive:
-		if p1_alive and p2_alive:
-			show_screen("YOU WIN!\nBoth players defeated the boss!")
-		else:
-			var survivor = "Player 1" if p1_alive else "Player 2"
-			show_screen("YOU WIN!\n" + survivor + " defeated the boss!")
+	# Player 1 kills Gorgochov AND Player 2
+	if p1_alive and not p2_alive and not boss_alive:
+		show_screen("GAME OVER\nPlayer 1 betrayed their ally!\nPlayer 1 wins!")
+		return
+
+	# Player 2 kills Gorgochov AND Player 1
+	if p2_alive and not p1_alive and not boss_alive:
+		show_screen("GAME OVER\nPlayer 2 betrayed their ally!\nPlayer 2 wins!")
 		return
 
 

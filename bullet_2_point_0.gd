@@ -20,8 +20,8 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body != shooter and body is not TileMapLayer:
-		body.health -= 15
-		print(body.health)
+		body.health -= 30
+		#print(body.health)
 		queue_free()
 	if body is TileMapLayer:
 		queue_free()

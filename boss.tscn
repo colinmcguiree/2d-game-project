@@ -54,10 +54,12 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_skx2t"]
-size = Vector2(60, 61)
+[sub_resource type="CircleShape2D" id="CircleShape2D_skx2t"]
+radius = 29.0
 
 [node name="boss" type="CharacterBody2D" unique_id=2109740087]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_6xxrv")
 bullet_scene_2 = ExtResource("2_skx2t")
 
@@ -68,12 +70,20 @@ sprite_frames = SubResource("SpriteFrames_kles1")
 autoplay = "default"
 
 [node name="Timer" type="Timer" parent="." unique_id=261869388]
+wait_time = 2.3
 
 [node name="BossBSpawn_A" type="Marker2D" parent="." unique_id=730993697]
-position = Vector2(1, 78)
+position = Vector2(16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360110973]
-position = Vector2(14, 15.5)
-shape = SubResource("RectangleShape2D_skx2t")
+position = Vector2(13, 16)
+shape = SubResource("CircleShape2D_skx2t")
+
+[node name="GorgyHP" type="Label" parent="." unique_id=1853917942]
+offset_left = 3.0
+offset_top = -22.0
+offset_right = 43.0
+offset_bottom = 1.0
+text = "500"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,8 +4,9 @@ extends CharacterBody2D
 @onready var bspawnA = $BossBSpawn_A
 @onready var shoot_timer = $Timer
 @onready var move_timer = $MoveTimer
+@onready var healthbar = $GorgyHP
 
-var health = 500
+var health = 999
 var bullet_angle_offset = 0.0
 var num_bullets = 8
 
@@ -37,7 +38,7 @@ func fire():
 
 
 func _ready() -> void:
-	shoot_timer.wait_time = 0.7
+	shoot_timer.wait_time = 2
 	shoot_timer.start()
 
 
@@ -45,6 +46,8 @@ func _process(delta: float) -> void:
 	if health <= 0:
 		queue_free()
 		return
+
+	healthbar.text = str(health)
 
 	orbit_angle += orbit_speed * delta
 	wobble_angle += wobble_speed * delta

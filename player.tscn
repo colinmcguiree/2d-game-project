@@ -215,7 +215,7 @@ offset_left = -6.0
 offset_top = -24.0
 offset_right = 21.0
 offset_bottom = -6.0
-text = "10"
+text = "99"
 label_settings = SubResource("LabelSettings_hqtel")
 
 [node name="P1_heal" type="Area2D" parent="." unique_id=655341542]
