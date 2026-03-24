@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 99
+var health = 999
 var facing = Vector2.RIGHT
 const SPEED = 100.0
 @onready var P2_Heals = false
