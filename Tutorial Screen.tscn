@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bi14xlm70y342"]
+
+[ext_resource type="FontFile" uid="uid://cm72y53yum0pd" path="res://Free/munro/munro-small.ttf" id="1_unjit"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyhm1"]
+font = ExtResource("1_unjit")
+font_size = 50
+
+[node name="TutorialScreen" type="Node2D" unique_id=1152110034]
+
+[node name="Label" type="Label" parent="." unique_id=1268144078]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Player 1 move around the map with WASD keys
+                Q to shoot    E to heal
+
+Player 2 move around the map with arrow keys
+                . to shoot     / to heal"
+label_settings = SubResource("LabelSettings_jyhm1")
+horizontal_alignment = 1
+vertical_alignment = 1
