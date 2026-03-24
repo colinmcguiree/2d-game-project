@@ -200,7 +200,7 @@ bullet_scene = ExtResource("2_5gusw")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1528299606]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hwvyx")
-animation = &"move"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513665871]
