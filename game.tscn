@@ -193,10 +193,21 @@ offset_bottom = 648.0
 color = Color(0, 0, 0, 0.1882353)
 
 [node name="Label" type="Label" parent="Overlay" unique_id=610587480]
-offset_right = 40.0
-offset_bottom = 124.0
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -62.0
+offset_right = 29.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset_ratio = Vector2(576, 324)
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 30
+text = "text"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1674673657]
 stream = ExtResource("6_ryrav")

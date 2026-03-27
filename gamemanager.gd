@@ -23,6 +23,8 @@ func _process(_delta):
 
 	# Gorgochov kills both players
 	if not p1_alive and not p2_alive:
+		#$YourLabelNode.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		#$YourLabelNode.add_theme_font_size_override("font_size", 32)
 		show_screen("GAME OVER\nGorgochov remains victorious\n\nPress Enter or Escape to quit")
 		return
 
@@ -41,3 +43,4 @@ func show_screen(message: String):
 	game_over = true
 	overlay.visible = true
 	overlay_label.text = message
+	overlay_label.visible = true
