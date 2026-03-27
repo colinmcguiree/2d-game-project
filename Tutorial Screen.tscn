@@ -1,21 +1,30 @@
 [gd_scene format=3 uid="uid://bi14xlm70y342"]
 
+[ext_resource type="Script" uid="uid://dbdaui0pih2n8" path="res://tutorial_screen.gd" id="1_jyhm1"]
 [ext_resource type="FontFile" uid="uid://cm72y53yum0pd" path="res://Free/munro/munro-small.ttf" id="1_unjit"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jyhm1"]
+line_spacing = 2.0
 font = ExtResource("1_unjit")
-font_size = 50
+font_size = 46
 
 [node name="TutorialScreen" type="Node2D" unique_id=1152110034]
+script = ExtResource("1_jyhm1")
 
 [node name="Label" type="Label" parent="." unique_id=1268144078]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Player 1 move around the map with WASD keys
-                Q to shoot    E to heal
+offset_right = 1159.0
+offset_bottom = 646.0
+text = "Defeat Gorgochov and be the last man standing!
+You and your teammate must work together,
+but only one can win. 
+
+Player 1 move around the map with WASD keys
+ Q to shoot    E to heal
 
 Player 2 move around the map with arrow keys
-                . to heal     / to shoot"
+/ to shoot     . to heal
+
+Press space to go back to the home screen"
 label_settings = SubResource("LabelSettings_jyhm1")
 horizontal_alignment = 1
 vertical_alignment = 1
